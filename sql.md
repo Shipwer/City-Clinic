@@ -1104,7 +1104,7 @@ GROUP BY d.ID, d.name, d.capacity
 
 ORDER BY load_percent DESC;
 
-[Результат запроса](https://github.com/Shipwer/ZAM/blob/main/11b1ee9556f6a9239b920e51396963ec.png?raw=true)
+[Результат запроса](https://github.com/Shipwer/ZAM/blob/main/51572d79cc1774b9b1d8bdba268bd5a7.png?raw=true)
 
 # Демография болезней
 
@@ -1129,6 +1129,34 @@ GROUP BY mr.name
 HAVING COUNT(p.ID) >= 3
 
 ORDER BY "Всего пациентов" DESC, "Средний возраст" DESC
+
+LIMIT 10;
+
+[Результат запроса](https://github.com/Shipwer/ZAM/blob/main/11b1ee9556f6a9239b920e51396963ec.png?raw=true)
+
+# Статистика врачей
+
+### Используется для определения у каждого врача количество пациентов, которых он лечит, среднее количество дней, за которые происходит лечение, а также количество вылеченных пациентов
+
+SELECT d.full_name AS doctor_name, dep.name AS department_name,
+
+COUNT(DISTINCT a.patient_id) AS patients_count,
+
+ROUND(AVG(julianday(a.discharge_date) - julianday(a.hospitalization_date)), 1) AS avg_treatment_days,
+
+SUM(CASE WHEN a.status = 'Закрыта' THEN 1 ELSE 0 END) AS closed_records
+
+FROM doctors d
+
+JOIN appointments a ON a.doctor_id = d.ID
+
+LEFT JOIN departments dep ON dep.ID = a.department_id
+
+GROUP BY [d.ID](https://d.ID), d.full_name, dep.name
+
+HAVING COUNT(DISTINCT a.patient_id) >= 1     
+
+ORDER BY patients_count DESC
 
 LIMIT 10;
 
