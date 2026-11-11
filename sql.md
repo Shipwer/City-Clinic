@@ -1152,7 +1152,7 @@ JOIN appointments a ON a.doctor_id = d.ID
 
 LEFT JOIN departments dep ON dep.ID = a.department_id
 
-GROUP BY [d.ID](https://d.ID), d.full_name, dep.name
+GROUP BY d.ID, d.full_name, dep.name
 
 HAVING COUNT(DISTINCT a.patient_id) >= 1     
 
@@ -1160,4 +1160,4 @@ ORDER BY patients_count DESC
 
 LIMIT 10;
 
-[Результат запроса](https://github.com/Shipwer/ZAM/blob/main/11b1ee9556f6a9239b920e51396963ec.png?raw=true)
+[Результат запроса](https://github.com/Shipwer/ZAM/blob/main/804936e96e2241bf2387d28a4bf6f50b.png?raw=true)
