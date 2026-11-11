@@ -1081,3 +1081,51 @@ head_doctor_id) VALUES
 (179, 57, 5, 15954819, '2025-02-25', '2025-03-18', 'Закрыта'),
 
 (180, 33, 2, 15954801, '2025-11-26', '2025-12-02', 'Закрыта');
+
+## Аналитические запросы
+
+# Самые загруженные отделения больницы
+
+### Используется для определения самых загруженных отделений среди всех в городе. Будет полезно для того, чтобы проводить грамотное распределение новых пациентов по тем отделениям, в которых больше свободных коек
+
+SELECT d.name AS department_name, d.capacity, COUNT(a.ID) AS open_records,
+
+COUNT(DISTINCT p.ID) AS unique_patients, ROUND(COUNT(DISTINCT p.ID) * 100.0 /d.capacity, 1) AS load_percent
+
+FROM departments d
+
+JOIN appointment a ON a.department_id = d.ID
+
+JOIN patients p ON p.ID = a.patient_id
+
+WHERE a.status = 'Открыта'
+
+GROUP BY d.ID, d.name, d.capacity
+
+ORDER BY load_percent DESC;
+
+# Демография болезней
+
+### Используется для нахождения среднего возраста пациентов, болеющих определенной болезнью. Будет полезно для закупки лекарств для определенных возрастных групп, чтобы избежать нехватки медикаментов или ухудшения состояния пациентов
+
+SELECT mr.name AS "Название болезни", COUNT(p.ID) AS "Всего пациентов",
+
+ROUND(AVG(strftime('%Y', 'now') - strftime('%Y', p.DOB)), 1) AS "Средний возраст",
+
+MIN(strftime('%Y', 'now') - strftime('%Y', p.DOB)) AS "Мин. возраст", MAX(strftime('%Y', 'now') -
+
+strftime('%Y', p.DOB)) AS "Макс. возраст", SUM(CASE WHEN (strftime('%Y', 'now') -
+
+strftime('%Y', p.DOB)) >= 60 THEN 1 ELSE 0 END) AS "Пациенты 60+"
+
+FROM patients p
+
+JOIN medical_record mr ON p.diagnosis_id = mr.ID
+
+GROUP BY mr.name
+
+HAVING COUNT(p.ID) >= 3
+
+ORDER BY "Всего пациентов" DESC, "Средний возраст" DESC
+
+LIMIT 10;
