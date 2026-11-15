@@ -1103,8 +1103,9 @@ GROUP BY d.ID, d.name, d.capacity
 
 ORDER BY load_percent DESC;
 
-[Результат запроса](https://github.com/Shipwer/ZAM/blob/main/51572d79cc1774b9b1d8bdba268bd5a7.png?raw=true)
 
+## Результат запроса
+<img width="1086" height="909" alt="image" src="https://github.com/user-attachments/assets/4d9dc4a0-68fd-4835-b397-78442dc8ed42" />
 # Демография болезней
 
 ### Используется для нахождения среднего возраста пациентов, болеющих определенной болезнью. Будет полезно для закупки лекарств для определенных возрастных групп, чтобы избежать нехватки медикаментов или ухудшения состояния пациентов
@@ -1131,7 +1132,9 @@ ORDER BY "Всего пациентов" DESC, "Средний возраст" D
 
 LIMIT 10;
 
-[Результат запроса](https://github.com/Shipwer/ZAM/blob/main/11b1ee9556f6a9239b920e51396963ec.png?raw=true)
+## Результат запроса
+
+<img width="1232" height="333" alt="image" src="https://github.com/user-attachments/assets/3d2de808-79ed-4b9a-bc48-76939d254b9c" />
 
 # Статистика врачей
 
@@ -1159,4 +1162,6 @@ ORDER BY patients_count DESC
 
 LIMIT 10;
 
-[Результат запроса](https://github.com/Shipwer/ZAM/blob/main/804936e96e2241bf2387d28a4bf6f50b.png?raw=true)
+## Результат запроса
+
+<img width="1164" height="639" alt="image" src="https://github.com/user-attachments/assets/6d8c4549-52d1-4b4b-aa38-b1a51615c4f1" />
