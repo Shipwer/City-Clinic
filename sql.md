@@ -1091,7 +1091,7 @@ INSERT INTO appointments (ID, patient_id, doctor_id, department_id, hospitalizat
 
 SELECT d.name AS department_name, d.capacity, COUNT(a.ID) AS open_records,
 
-COUNT(DISTINCT p.ID) AS unique_patients, ROUND(COUNT(DISTINCT p.ID) * 100.0 /d.capacity, 1) AS load_percent
+COUNT(DISTINCT p.ID) AS unique_patients, ROUND((COUNT(DISTINCT p.ID) * 100.0 /d.capacity)*100) AS load_percent
 
 FROM departments d
 
