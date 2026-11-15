@@ -1105,7 +1105,7 @@ GROUP BY d.ID, d.name, d.capacity
 
 ORDER BY load_percent DESC;
 
-[Результат запроса](https://github.com/Shipwer/ZAM/blob/main/51572d79cc1774b9b1d8bdba268bd5a7.png?raw=true)
+[Результат запроса](https://github.com/Shipwer/ZAM/blob/main/screenshot-2026-11-15-14-42-31.png?raw=true)
 
 # Демография болезней
 
