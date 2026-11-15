@@ -1,5 +1,3 @@
-<img width="1086" height="909" alt="image" src="https://github.com/user-attachments/assets/9527a703-8d83-4cca-8f3d-2359aedcbe80" />## Структура базы данных:
-
 # Таблица "Страховки"
 
 CREATE TABLE IF NOT EXISTS Insurance(
