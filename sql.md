@@ -1,4 +1,4 @@
-## Структура базы данных:
+<img width="1086" height="909" alt="image" src="https://github.com/user-attachments/assets/9527a703-8d83-4cca-8f3d-2359aedcbe80" />## Структура базы данных:
 
 # Таблица "Страховки"
 
@@ -1105,7 +1105,7 @@ GROUP BY d.ID, d.name, d.capacity
 
 ORDER BY load_percent DESC;
 
-[Результат запроса](https://github.com/Shipwer/ZAM/blob/main/screenshot-2026-11-15-14-42-31.png?raw=true)
+[Результат запроса](https://github.com/Shipwer/ZAM/blob/main/51572d79cc1774b9b1d8bdba268bd5a7.png?raw=true)
 
 # Демография болезней
 
