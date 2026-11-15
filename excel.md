@@ -30,4 +30,27 @@
 <img width="1245" height="297" alt="image" src="https://github.com/user-attachments/assets/7dd59902-d5b5-475a-8e1b-beaf3e13b291" />
 
 ## Итоговый анализ всех запросов
+## 1 запрос
+### Цель: Выявить загруженность больниц пациентами для оптимизации распределения новых больных по отделениям
+### Диаграмма:
+<img width="974" height="496" alt="image" src="https://github.com/user-attachments/assets/bb32d650-f8ca-4e8e-967f-8ba3d26adbdc" />
 
+### Вывод:
+<img width="798" height="236" alt="image" src="https://github.com/user-attachments/assets/a15a3d45-1de5-4e75-b6c0-23cd8aa6ad92" />
+
+## 2 запрос
+### Цель: Выявить возрастные группы пациентов по каждой болезни для оптимизации закупок лекарств
+### Диаграмма:
+<img width="918" height="582" alt="image" src="https://github.com/user-attachments/assets/4d40621e-5a5d-495f-95a8-2bb5bdb4291f" />
+
+### Вывод:
+<img width="1105" height="446" alt="image" src="https://github.com/user-attachments/assets/914c5eb2-a7f4-4146-bc94-8a5041195c23" />
+
+
+## 3 запрос
+### Цель: Выявить загруженность докторов пациентами для оптимизации распределения новых больных по лечащим врачам
+### Диаграмма:
+<img width="855" height="468" alt="image" src="https://github.com/user-attachments/assets/545843ed-6fa6-4345-bcab-9f5edd8000c3" />
+
+### Вывод:
+<img width="826" height="242" alt="image" src="https://github.com/user-attachments/assets/2df9c668-5f26-4baf-9313-8df83c9e6ff7" />
