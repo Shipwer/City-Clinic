@@ -1095,7 +1095,7 @@ COUNT(DISTINCT p.ID) AS unique_patients, ROUND(COUNT(DISTINCT p.ID) * 100.0 /d.c
 
 FROM departments d
 
-JOIN appointment a ON a.department_id = d.ID
+JOIN appointments a ON a.department_id = d.ID
 
 JOIN patients p ON p.ID = a.patient_id
 
