@@ -13,6 +13,7 @@
 <img width="1204" height="205" alt="image" src="https://github.com/user-attachments/assets/28c6df6e-35d6-4094-848c-7079a4c8101a" />
 
 ## "Отделения"
+<img width="1378" height="264" alt="image" src="https://github.com/user-attachments/assets/33d1aee5-cfd2-4b32-9114-1f53b5d15d40" />
 
 ## "Страховки"
 <img width="431" height="414" alt="image" src="https://github.com/user-attachments/assets/412821da-5448-4b35-b29e-8865f623d7e6" />
